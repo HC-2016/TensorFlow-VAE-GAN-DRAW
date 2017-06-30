@@ -14,7 +14,7 @@ from utils import discriminator, decoder
 from generator import Generator
 
 def concat_elu(inputs):
-    return tf.nn.elu(tf.concat(3, [-inputs, inputs]))
+    return tf.nn.elu(tf.concat([-inputs, inputs], 3))
 
 class GAN(Generator):
 
